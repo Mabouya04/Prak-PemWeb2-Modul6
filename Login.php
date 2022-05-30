@@ -9,7 +9,12 @@ $sql = koneksi()->prepare("SELECT * FROM member WHERE nomor_member = :nomorMembe
 $sql->bindParam('nomorMember', $nomorMember, PDO::PARAM_STR);
 $sql->execute();
 $hasil = $sql->fetch();
-$verify = password_verify($pass, $hasil['pass']);
+
+$pw=$hasil['pass'];
+
+
+
+$verify = password_verify($pass, $pw);
 
     if ($verify) {
         $_SESSION["nomor_member"] = $hasil['nomor_member'];

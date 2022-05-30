@@ -86,7 +86,7 @@
                     </li>
                     <?php
                 }
-                if(!isset($_SESSION['nomor_member'])){
+                if(empty($_SESSION['nomor_member'])){
                     ?>
                     <li class="nav-item">
                         <a class="btn btn-outline-success " href="FormLogin.php">Login</a>

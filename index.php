@@ -1,3 +1,6 @@
+<?php
+    session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +18,15 @@
     <?php
         $title1 = 'index';
         include('Template.php');
-    ?>
 
+            if(isset($_SESSION['nomor_member'])){
+                echo '<div class=" p-3 container mt-5 center bg-dark text-white" style="width: fit-content;">
+                <div class="border border-light p-2">';
+                echo '<h1>Selamat Datang '.$_SESSION['nama_member'].'</h1>';
+                echo '</div> </div>';
+            }
+        ?>
+    
     <div class="container mt-5 center row">
         <a href="Member.php" class="ml-5 column">
         <div class="card">

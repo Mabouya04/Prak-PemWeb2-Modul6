@@ -1,8 +1,8 @@
 <?php require('./Model.php');
 
     session_start();
-    if(!isset($_SESSION['AdminLoginId'])){
-        header("location:error.php");
+    if(!isset($_SESSION['nomor_member'])){
+        header("location:ErrorPage.php");
     }
 
     if (isset($_GET['id_buku'])) {
